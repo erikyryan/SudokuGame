@@ -3,6 +3,7 @@ package com.sudoku.buildlogic;
 import com.sudoku.computationlogic.GameLogic;
 import com.sudoku.domain.IStorage;
 import com.sudoku.domain.SudokuGame;
+import com.sudoku.persistence.LocalStorageImpl;
 import com.sudoku.userinterface.IUserInterfaceContract;
 import com.sudoku.userinterface.logic.ControlLogic;
 

@@ -1,5 +1,8 @@
 package com.sudoku;
 
+import com.sudoku.buildlogic.SudokuBuildLogic;
+import com.sudoku.userinterface.IUserInterfaceContract;
+import com.sudoku.userinterface.UserInterfaceImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

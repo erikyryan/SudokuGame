@@ -1,5 +1,6 @@
 package com.sudoku.userinterface.logic;
 
+import com.sudoku.computationlogic.GameLogic;
 import com.sudoku.constants.GameState;
 import com.sudoku.constants.Messages;
 import com.sudoku.domain.IStorage;
@@ -26,7 +27,7 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
             newGridState[x][y] = input;
 
             gameData = new SudokuGame(
-                    GameLogic.checkCompletion(newGridState),
+                    GameLogic.checkForCompletion(newGridState),
                     newGridState
             );
 
@@ -47,7 +48,7 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
     public void onDialogClick() {
         try{
             storage.updateGameData(
-                    GameLogic.getNewGame();
+                    GameLogic.getNewGame()
             );
 
             view.updateBoard(storage.getGameData());
