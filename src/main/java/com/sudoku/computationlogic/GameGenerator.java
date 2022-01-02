@@ -37,7 +37,7 @@ public class GameGenerator {
             solvable = SudokuSolver.puzzleIsSolvable(toBeSolved);
         }
 
-        return new int[0][];
+        return solveableArray;
     }
 
     private static int[][] getSolvedGame(){
@@ -84,7 +84,6 @@ public class GameGenerator {
                     }
                 }
             }
-
         }
 
         return newGrid;
