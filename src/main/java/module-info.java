@@ -9,4 +9,6 @@ module com.sudoku.javadesktopsudoku {
     opens com.sudoku to javafx.fxml;
     exports com.sudoku.userinterface;
     opens com.sudoku.userinterface to javafx.fxml;
+    exports com.sudoku.buildlogic;
+    opens com.sudoku.buildlogic to javafx.fxml;
 }

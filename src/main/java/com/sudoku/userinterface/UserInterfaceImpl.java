@@ -1,5 +1,6 @@
 package com.sudoku.userinterface;
 
+import com.sudoku.constants.GameState;
 import com.sudoku.domain.Coordinates;
 import com.sudoku.domain.SudokuGame;
 import javafx.event.EventHandler;
@@ -80,7 +81,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View , EventHan
 
         boardBackground.setFill(BOARD_BACKGROUND_COLOR);
 
-        root.getChildren().addAll(boardBackground)
+        root.getChildren().addAll(boardBackground);
     }
 
     private void drawTextFilds(Group root){
@@ -198,7 +199,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View , EventHan
 
                 tile.setText(value);
 
-                if(game.getGameState() == game.NEW){
+                if(game.getGameState() == GameState.NEW){
                     if(value.equals("")){
                         tile.setStyle("-fx-opacity: 1;");
                         tile.setDisable(false);
@@ -234,7 +235,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View , EventHan
             }else if(event.getCode() == KeyCode.BACK_SPACE){
                 handleInput(0,event.getSource());
             }else {
-                ((TextField) event.getSource().setText(""))
+                ((TextField) event.getSource()).setText("");
             }
         }
         event.consume();
